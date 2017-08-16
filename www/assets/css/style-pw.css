@@ -7275,3 +7275,8 @@ button[type="submit"] .loading {
     width: 100%;
   }
 }
+.below-video {
+  vertical-align: bottom;
+  float: none;
+  margin-top: 500px;
+}
