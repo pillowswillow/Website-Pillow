@@ -2017,6 +2017,12 @@ h6 {
   font-size: 132px;
   text-transform: uppercase;
   letter-spacing: 0;
+  font-family: "Cinzel", serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif !important;
 }
 h1,
 h2,
