@@ -6487,21 +6487,25 @@ button[type="submit"] .loading {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    /*
+        .buy-btn {
+            min-width: 0;
+            padding: 9px 14px 7px !important;
+            font-size: 0;
+
+            &:before {
+                display: inline-block;
+                font: normal normal normal 20px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: "\f07a";
+            }
+        }*/
+  }
   .header .navigation-list {
     padding-left: 15px;
-  }
-  .header .buy-btn {
-    min-width: 0;
-    padding: 9px 14px 7px !important;
-    font-size: 0;
-  }
-  .header .buy-btn:before {
-    display: inline-block;
-    font: normal normal normal 20px/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\f07a";
   }
 }
 @media (min-width: 768px) {
@@ -7005,6 +7009,9 @@ button[type="submit"] .loading {
 .bg4 {
   background-image: url("../img/backgrounds/bg4.jpg");
 }
+.bg4b {
+  background-image: url("../img/backgrounds/bg4b.jpg");
+}
 .bg5 {
   background-image: url("../img/backgrounds/bg5.jpg");
 }
@@ -7014,6 +7021,9 @@ button[type="submit"] .loading {
 .bg4.overlay:before {
   background-color: #2F7C95;
   opacity: 0.85;
+}
+.bg4b.overlay:before {
+  opacity: 0.5;
 }
 .bg5.overlay:before {
   background-color: #262627;
