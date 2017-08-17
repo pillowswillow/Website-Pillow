@@ -12,3 +12,88 @@
 .header-wrapper .buy-btn {
 	color: @white;
 }
+
+.game-column {
+	//.transition(~"background 0.25s ease-in-out");
+	//.transition(~"transform 0.1s ease-out");
+	.transition(~"all 0.05s ease-out");
+	
+	position: relative;
+	max-width: 369px;
+	padding: 47px 15px 43px;
+	min-height: 600px;
+	text-align: center;
+	border: 1px solid @gray-lighter;
+	overflow: hidden;
+
+	.sale-label {
+		.rotate(-45deg);
+
+		position: absolute;
+		top: -12px;
+		left: -57px;
+		display: inline-block;
+		width: 150px;
+		padding-top: 25px;
+		font-family: @font-family-heading;
+		font-weight: @bold-weight;
+		font-size: @font-size-big;
+		text-align: center;
+		line-height: 30px;
+		color: @text-white;
+	}
+
+	.package-title {
+		&:extend(.base-clr-txt);
+	}
+
+	.package-price {
+		font-size: 70px;
+		font-family: @font-family-heading;
+		font-weight: @bold-weight;
+		line-height: 1;
+		color: @text-gray-dark;
+
+		.currency {
+			font-size: 45px;
+			vertical-align: top;
+			line-height: 1;
+		}
+	}
+
+	.package-detail {
+		.transition(~"color 0.2s ease");
+
+		padding: 23px 0 17px;
+
+		ul li {
+			line-height: 29px;
+
+			.check-icon {
+				margin-right: 10px;
+				color: @green;
+			}
+		}
+	}
+
+	.btn {
+		margin: 0 !important;
+		min-width: 0;
+		max-width: 100%;
+		text-align: center;
+	}
+
+	h5 {
+		font-family: @font-family-heading;
+	}
+
+	&:hover {
+		.scale(1.05);
+		.transition(~"all 0.2s ease-out");
+		border-color: @base-color;
+
+		h5 {
+			color: @base-color;
+		}
+	}
+}
