@@ -7278,5 +7278,12 @@ button[type="submit"] .loading {
 .below-video {
   vertical-align: bottom;
   float: none;
-  margin-top: 500px;
+  margin-top: 300px;
+  margin-bottom: 0px;
+}
+.remove-padding {
+  padding: 0 !important;
+}
+.header-wrapper .buy-btn {
+  color: #fff;
 }
