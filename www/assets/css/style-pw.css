@@ -7367,8 +7367,8 @@ button[type="submit"] .loading {
 .game-column.pwdemo {
   background-image: url("../img/games/banner-pwdemo.png");
 }
-.game-column.reefquest {
-  background-image: url("../img/games/banner-reefquest.png");
+.game-column.chainquest {
+  background-image: url("../img/games/banner-chainquest.png");
 }
 .underline-img {
   margin-bottom: 16px;
@@ -7390,4 +7390,9 @@ button[type="submit"] .loading {
 }
 .underline-img:hover::after {
   background-color: #910F91;
+}
+.trailer-box {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
 }
