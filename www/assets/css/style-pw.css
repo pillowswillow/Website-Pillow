@@ -6355,6 +6355,7 @@ button[type="submit"] .loading {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  margin-top: -16px;
 }
 .navigation-header .buy-btn {
   margin: 9px 0 0;
