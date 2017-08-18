@@ -26,9 +26,12 @@
 	padding: 47px 15px 43px;
 	min-height: 600px;
 	text-align: center;
-	border: 1px solid @gray-lighter;
 	overflow: hidden;
 	margin-bottom: 24px;
+
+	a {
+		text-decoration: none;
+	}
 
 	h6 {
 		.transition(~"all 0.2s linear");
@@ -36,13 +39,7 @@
 		font-family: @font-family-heading;
 		font-weight: normal;
 		letter-spacing: 2px;
-		//text-transform: uppercase;
-		/*
-		// Add underline?
-		border-bottom-width: 2px;
-		border-color: @white;
-		border-style: solid;
-		padding-bottom: 4px;*/
+		
 		&::after {
 			content: "";
 			display: block;
@@ -57,10 +54,8 @@
 	&:hover {
 		.scale(1.05);
 		.transition(~"all 0.2s ease-out");
-		border-color: @white;
 
 		h6::after {
-			//background-color: @base-color;
 			width: 95%;
 			.transition(~"width 0.2s ease-out");
 		}
@@ -92,14 +87,8 @@
 		margin-left: -200px;
 		content: "";
 		background-color: transparent;
-		height: 2px;
+		height: 8px;
 		.transition(~"all 0.2s ease-out");
-	}
-
-	&:hover {
-		&::after {
-			background-color: @base-color;
-		}
 	}
 }
 
