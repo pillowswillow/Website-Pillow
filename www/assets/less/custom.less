@@ -18,6 +18,9 @@
 	//.transition(~"transform 0.1s ease-out");
 	.transition(~"all 0.05s ease-out");
 	
+	background-position: left top;
+	background-repeat: no-repeat;
+
 	position: relative;
 	max-width: 369px;
 	padding: 47px 15px 43px;
@@ -25,7 +28,9 @@
 	text-align: center;
 	border: 1px solid @gray-lighter;
 	overflow: hidden;
+	margin-bottom: 24px;
 
+	/*	TAKEN FROM PRODUCT-COLUMN!
 	.sale-label {
 		.rotate(-45deg);
 
@@ -82,18 +87,50 @@
 		max-width: 100%;
 		text-align: center;
 	}
+	*/
 
-	h5 {
+	h6 {
+		.transition(~"all 0.2s linear");
+		color: @white;
 		font-family: @font-family-heading;
+		font-weight: normal;
+		letter-spacing: 2px;
+		//text-transform: uppercase;
+		/*
+		// Add underline?
+		border-bottom-width: 2px;
+		border-color: @white;
+		border-style: solid;
+		padding-bottom: 4px;*/
+		&::after {
+			content: "";
+			display: block;
+			width: 50%;
+			margin: 8px auto;
+			height: 2px;
+			background-color: @white;
+		}
 	}
 
 	&:hover {
 		.scale(1.05);
 		.transition(~"all 0.2s ease-out");
-		border-color: @base-color;
+		border-color: @white;
 
-		h5 {
-			color: @base-color;
+		&::after {
+			background-color: @gray-light;
 		}
+	}
+
+	&.sol {
+		background-image: url("@{img-path}games/banner-sol.png");
+	}
+
+	&.pwdemo {
+		background-image: url("@{img-path}games/banner-pwdemo.png");
+	}
+
+	&.reefquest {
+		background-image: url("@{img-path}games/banner-reefquest.png");
 	}
 }
