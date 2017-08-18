@@ -2572,7 +2572,7 @@ li {
   min-height: 100%;
 }
 .heading-block {
-  padding: 150px 0;
+  padding: 100px 0;
 }
 .hero-heading-top,
 .hero-heading-bottom {
@@ -7369,4 +7369,25 @@ button[type="submit"] .loading {
 }
 .game-column.reefquest {
   background-image: url("../img/games/banner-reefquest.png");
+}
+.underline-img {
+  margin-bottom: 16px;
+}
+.underline-img img {
+  margin-bottom: 16px;
+}
+.underline-img::after {
+  display: inline-block;
+  width: 200px;
+  margin-left: -200px;
+  content: "";
+  background-color: transparent;
+  height: 2px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.underline-img:hover::after {
+  background-color: #910F91;
 }

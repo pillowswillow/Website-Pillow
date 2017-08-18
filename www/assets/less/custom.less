@@ -78,3 +78,27 @@
 		background-image: url("@{img-path}games/banner-reefquest.png");
 	}
 }
+
+.underline-img {
+	margin-bottom: 16px;	// Make room for the underline
+
+	img {
+		margin-bottom: 16px;
+	}
+
+	&::after {
+		display: inline-block;
+		width: 200px;
+		margin-left: -200px;
+		content: "";
+		background-color: transparent;
+		height: 2px;
+		.transition(~"all 0.2s ease-out");
+	}
+
+	&:hover {
+		&::after {
+			background-color: @base-color;
+		}
+	}
+}
