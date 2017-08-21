@@ -7330,6 +7330,9 @@ button[type="submit"] .loading {
 .remove-padding {
   padding: 0 !important;
 }
+.remove-padding-top {
+  padding-top: 0 !important;
+}
 .header-wrapper .buy-btn {
   color: #fff;
 }
@@ -7424,5 +7427,5 @@ button[type="submit"] .loading {
   min-height: 600px;
 }
 .pull-down-manual {
-  margin-top: 520px;
+  margin-top: 575px;
 }

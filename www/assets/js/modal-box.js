@@ -31,7 +31,26 @@
 
         if ( $('[data-modal].open').length ) $('[data-modal].open').modalBox('hide');
 
-        if ( $iframe.length ) $iframe.attr('src', $iframe.data('iframeSrc'));
+        /*// THIJS: Here the src for the iframes is swapped back in. Needs to be stored in array for this to work!
+        if ( $iframe.length ) {
+            $iframe.each(function(index) {
+                var $this = $(this);
+                $this.attr('src', $iframe.data('iframeSrc')[index]);
+            });
+        }*/
+
+        if ( $iframe.length ) {
+            $iframe.each(function(index) {
+                $frame = $(this);
+                $frame.attr('src', $frame.data('iframeSrc'));
+            });
+        }
+
+        /*//THIJS: Breakpoint!
+        if ( $iframe.length ) {
+            var src = $iframe.data('iframeSrc');
+            $iframe.attr('src', src);
+        }*/
 
         $el.addClass('open');
 
@@ -128,13 +147,22 @@
             time = $modal.data('timeout'),
             scroll = $modal.data('scroll');
 
+        //THIJS: This only seems to support one single iframe per modal... is that ideal?
         if ( $modal.find('iframe').length ) {
-            var iframe = $modal.find('iframe'),
+            $modalBox.addClass('iframe-box');   // Set some type of styling on the modal container?
+            $modal.find('iframe').each(function() {
+                var $this = $(this);
+                var src = $this.attr('src');
+                $this.attr('src', '');
+                var dataArray
+                $this.data('iframeSrc', src);
+            });
+
+/*            var iframe = $modal.find('iframe'),
                 src = iframe.attr('src');
 
-            $modalBox.addClass('iframe-box');
             iframe.attr('src', '');
-            iframe.data('iframeSrc', src);
+            iframe.data('iframeSrc', src);*/
         }
 
         if ( time ) {

@@ -56,11 +56,11 @@
 
 		<!--<section id="hero" class="hero-section ytp-player-background bg-cover window-height light-text" data-video="lZ4-8xMTeDE" data-property="{videoURL: 'https://www.youtube.com/watch?v=lZ4-8xMTeDE', containment: '#hero', autoPlay: true, realfullscreen: true, stopMovieOnBlur: false, addRaster: false, showControls: false, mute:true, startAt:0, opacity:1, gaTrack: false, mobileFallbackImage: 'assets/video/placeholders/book-placeholder.png'}">-->
 		<section id="hero" class="hero-section bg1 window-height light-text">
-		<div class="video-bg">
-			<video autoplay loop class="book" muted>
-				<source src="assets/video/book-l.mp4" type="video/mp4"/>
-			</video>
-		</div>
+			<div class="video-bg">
+				<video autoplay loop class="book" muted>
+					<source src="assets/video/book-l.mp4" type="video/mp4"/>
+				</video>
+			</div>
 			<ul class="socials-nav">
 				<li class="socials-nav-item"><a href="#"><span class="fa fa-twitter"></span></a></li>
 				<li class="socials-nav-item"><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -68,8 +68,7 @@
 			</ul>
 			<div class="heading-block align-center subtract-height">
 				<div class="container">
-					<h5 class="heading-alt" style="margin-bottom: 8px;">Now available!</h5>
-					<a href="#" class="btn btn-md" data-modal-link="get-it-now">Get it now!</a>
+					<a href="#" class="btn btn-md" data-modal-link="get-it-now">Now available!</a>
 					<a href="#" class="btn btn-outline btn-md" data-modal-link="details-sol">Trailer</a>
 				</div>
 			</div>
@@ -120,7 +119,7 @@
 			</div>
 		</header>
 
-		<section id="about" class="section align-center">
+		<section id="about" class="section align-center remove-padding-top">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
@@ -128,14 +127,15 @@
 					</div>
 					<div class="col-xs-12 col-sm-12">
 						<h3>Meet Nerow</h3>
-						<p class="text-alt">Something something subtitle subtitle et cetera.</p>		
+						<p class="text-alt">Here is a placeholder subtitle</p>
+						<br/>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-sm-7 align-left col-sm-push-5"><!-- Pushed to right on wide screens -->
-						<h6></h6>
-						<p>Let people play & enjoy wonderful, constructive and positive VR experiences. Our aim is to offer people VR (and in a later stage also AR) dreamscapes, where they can –alone, or together via multiplayer option- take a break from the real world and be astonished by wonderful virtual environments where they can look around, play, have fun and feel good.</p>
+						<h6>Header?</h6>
+						<p>He’s hard to miss in his green dragon-outfit: a brave little boy called Nerow. He lives peacefully among his many friends the mothlings and the giant. All is well in the dreamscape, until…</p>
 					</div>
 
 					<div class="col-sm-5 col-sm-pull-7 img-column">
@@ -149,8 +149,8 @@
 
 				<div class="row">
 					<div class="col-sm-7 align-left">
-						<h6>Then the darkness came.</h6>
-						<p>One fateful morning, the Sunbug is stolen and the world plunged into darkness. Can you and Nerow find the villain and restore peace?</p>
+						<h6>Header?</h6>
+						<p>...a greedy mothking steals the sun, and it’s up to Nerow to get it back. As he sets out on his journey, however, one tiny obstacle comes to light: Nerow is afraid of the dark. Will you help him find the light and save the day?</p>
 						<a href="#" data-modal-link="get-it-now" class="btn btn-outline-clr" style="margin: 30px 0 0">Go to store</a>
 					</div>
 
@@ -182,15 +182,9 @@
 	<section id="studio" class="section overlay overlay-clr gradient-overlay bg-cover bg4 light-text align-center">
 		<div class="container" style="padding:100px 0;"><!-- Extra padding to show images -->
 			<h2>About us</h2>
-			<p>At Pillow's Willow we create highly interactive and immersive VR games and experiences that truly transport you to another world.
-				Let us show you what we mean and take a look at our games!
+			<p>At Pillow's Willow we create highly interactive and immersive VR games and experiences that truly transport you to another world - called <b>The Dreamscape</b>.
 			</p>
-			<br />
-			<br />
-			<br />
-			<h5>Research</h5>
-			<p>We also cooperate, research, R&amp;D, etc etc etc.</p>
-			<a href="#" class="btn btn-lg btn-outline">Take a look</a>
+			<a href="#" data-modal-link="details-studio" class="btn btn-lg btn-outline">Take a look</a>
 		</div>
 	</section>
 
@@ -219,6 +213,16 @@
 	</section>
 
 	<section class="footer" id="footer">
+		<div class="container">
+			<h6>Contact</h6>
+
+			<ul class="list">
+				<li><i class="fa fa-map-marker"></i>Torenallee 20, 1234 AB Eindhoven</li>
+				<li><i class="fa fa-envelope"></i>info@pillowswillow.com</li>
+				<li><i class="fa fa-phone"></i>+31 06 123 456 78</li>
+			</ul>
+		</div>
+
 		<div class="footer-base">
 			<div class="container">
 
@@ -325,12 +329,42 @@
 	</div>
 
 	<div class="modal-window" data-modal="details-studio" style="background-color: rgba(2, 2, 2, 0.85);">
-		<div class="modal-box iframe-box iframe-video">
+		<div class="modal-box animated" data-animation="zoomIn" data-duration="700">
 			<span class="close-btn icon icon-office-52"></span>
 
-			<iframe src="https://www.youtube.com/embed/goH-Pv1w6xo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			<div class="container">
+				<div class="row">
+					<br/>
+					<h3>Pillow's Willow VR Studios</h3>
+				</div>
+				<div class="row">
+					<div class="iframe-box iframe-video large">
+						<iframe src="https://www.youtube.com/embed/goH-Pv1w6xo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen class="trailer-box"></iframe>	
+					</div>
+				</div>
+				<div class="row">
+					<h6>About the Studio</h6>
+					​<p>Our studio is located in the former Videolab of Philips in Eindhoven (The Netherlands), center of the so called ‘Brainport‘. Over the last years, a team of 15 developers, designers and artist has formed to work on the Pillow’s Willow universe, also known as the virtual dreamscape.</p>
+
+					<p>Our aim is to offer people VR (and in a later stage also AR) dreamscapes, where they can take a break from the real world and be astonished by wonderful virtual environments where they can look around, play, have fun and feel good. Let people play & enjoy wonderful, constructive and positive VR experiences!</p>
+
+					<h6>R&amp;D</h6>
+					<p>Stukje over VREE, VRisB, misschien trailertje? Wat gebeurt er als ik deze tekst een stuk langer maak?</p>
+					<p>Stukje over VREE, VRisB, misschien trailertje? Wat gebeurt er als ik deze tekst een stuk langer maak?</p>
+				</div>
+				<div class="row">
+					<div class="iframe-box iframe-video large">
+						<iframe width="854" height="480" src="https://www.youtube.com/embed/VzhdbbZLvZI" frameborder="0" allowfullscreen class="trailer-box"></iframe>	
+					</div>
+				</div>
+			</div>
 		</div>
+
 	</div>
+	<div class="container">
+	</div>
+</div>
+</div>
 
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js?ver=1"></script>
