@@ -2560,16 +2560,36 @@ li {
 }
 .video-bg {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  /*top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    */
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
   z-index: 0;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .video-bg {
+    margin-top: 182px;
+  }
 }
 .video-bg video {
   min-width: 100%;
   min-height: 100%;
+}
+.video-bg video.book {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  min-height: 50%;
+  min-width: 50%;
 }
 .video-bg.img-only {
   background-image: url('../video/placeholders/book-placeholder.png');
