@@ -6859,6 +6859,9 @@ button[type="submit"] .loading {
 .modal-window:not(.base-clr-bg) {
   background-color: rgba(255, 255, 255, 0.9);
 }
+.modal-window .container {
+  padding: 0 64px 24px;
+}
 .modal-box {
   -webkit-background-size: cover;
   -moz-background-size: cover;
