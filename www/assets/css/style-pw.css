@@ -7305,6 +7305,7 @@ button[type="submit"] .loading {
   transition: all 0.05s ease-out;
   background-position: left top;
   background-repeat: no-repeat;
+  display: block;
   position: relative;
   max-width: 369px;
   padding: 47px 15px 43px;
@@ -7312,8 +7313,6 @@ button[type="submit"] .loading {
   text-align: center;
   overflow: hidden;
   margin-bottom: 24px;
-}
-.game-column a {
   text-decoration: none;
 }
 .game-column h6 {
@@ -7348,6 +7347,7 @@ button[type="submit"] .loading {
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  text-decoration: none !important;
 }
 .game-column:hover h6::after {
   width: 95%;
