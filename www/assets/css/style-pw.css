@@ -7423,3 +7423,6 @@ button[type="submit"] .loading {
   height: auto;
   min-height: 600px;
 }
+.pull-down-manual {
+  margin-top: 520px;
+}
