@@ -2240,7 +2240,7 @@ span {
 }
 /* ----------------------------------------------------------------------------
     Common styles
----------------------------------------------------------------------------- */
+    ---------------------------------------------------------------------------- */
 .clearfix {
   zoom: 1;
 }
@@ -2570,6 +2570,21 @@ li {
 .video-bg video {
   min-width: 100%;
   min-height: 100%;
+}
+.video-bg.img-only {
+  background-image: url('../video/placeholders/book-placeholder.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1199px) {
+  .video-bg.img-only {
+    background-size: 1199px auto;
+  }
+}
+@media (min-width: 1200px) {
+  .video-bg.img-only {
+    background-size: 1903px auto;
+  }
 }
 .heading-block {
   padding: 100px 0;

@@ -1,6 +1,6 @@
 /* ----------------------------------------------------------------------------
     Common styles
----------------------------------------------------------------------------- */
+    ---------------------------------------------------------------------------- */
 
 
 // Micro ClearFix Mixin
@@ -216,6 +216,20 @@ li {
     video {
         min-width: 100%;
         min-height: 100%;
+    }
+
+    &.img-only {
+        background-image: url('@{video-path}placeholders/book-placeholder.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+
+        @media (max-width: @screen-md-max) {
+            background-size: @screen-md-max auto;
+        }
+
+        @media (min-width: @screen-lg) {
+            background-size: 1903px auto;
+        }
     }
 }
 
