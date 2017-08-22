@@ -6971,6 +6971,15 @@ button[type="submit"] .loading {
   right: 50px;
   top: 20px;
 }
+.modal-box.medium {
+  width: 75%;
+  height: 100%;
+  padding: 50px 44px 25px;
+}
+.modal-box.medium .close-btn {
+  right: 50px;
+  top: 20px;
+}
 .modal-box.top {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -7348,13 +7357,26 @@ button[type="submit"] .loading {
   background-repeat: no-repeat;
   display: block;
   position: relative;
-  max-width: 369px;
+  max-width: 360px;
   padding: 47px 15px 43px;
   min-height: 600px;
   text-align: center;
   overflow: hidden;
   margin-bottom: 24px;
   text-decoration: none;
+}
+@media (max-width: 991px) {
+  .game-column {
+    min-height: 369px;
+    margin: 0 auto 24px auto;
+    background-position: left top;
+  }
+  .game-column.sol {
+    background-position: left -80px;
+  }
+  .game-column.chainquest {
+    background-position: left -80px;
+  }
 }
 .game-column h6 {
   -webkit-transition: all 0.2s linear;
@@ -7428,6 +7450,21 @@ button[type="submit"] .loading {
   width: 100%;
   height: auto;
   min-height: 600px;
+}
+@media (max-width: 767px) {
+  .trailer-box {
+    min-height: 100px;
+  }
+}
+@media (max-width: 991px) {
+  .trailer-box {
+    min-height: 200px;
+  }
+}
+@media (max-width: 1199px) {
+  .trailer-box {
+    min-height: 300px;
+  }
 }
 .pull-down-manual {
   margin-top: 620px;

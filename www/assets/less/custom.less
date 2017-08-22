@@ -19,8 +19,6 @@
 }
 
 .game-column {
-	//.transition(~"background 0.25s ease-in-out");
-	//.transition(~"transform 0.1s ease-out");
 	.transition(~"all 0.05s ease-out");
 	
 	background-position: left top;
@@ -28,13 +26,25 @@
 
 	display: block;
 	position: relative;
-	max-width: 369px;
+	max-width: 360px;
 	padding: 47px 15px 43px;
 	min-height: 600px;
 	text-align: center;
 	overflow: hidden;
 	margin-bottom: 24px;
 	text-decoration: none;
+
+	@media (max-width: @screen-sm-max) {
+		min-height: 369px;
+		margin: 0 auto 24px auto;
+		background-position: left top;
+		&.sol {
+			background-position: left -80px;
+		}
+		&.chainquest {
+			background-position: left -80px;
+		}
+	}
 
 	h6 {
 		.transition(~"all 0.2s linear");
@@ -101,6 +111,16 @@
 	width: 100%;
 	height: auto;
 	min-height: 600px;
+	@media (max-width: @screen-xs-max) {
+		min-height: 100px;
+	}
+	@media (max-width: @screen-sm-max) {
+		min-height: 200px;
+	}
+	@media (max-width: @screen-md-max) {
+		min-height: 300px;
+	}
+	
 }
 
 //OLD!
