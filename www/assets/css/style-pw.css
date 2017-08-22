@@ -6989,6 +6989,18 @@ button[type="submit"] .loading {
   height: 100%;
   padding: 50px 44px 25px;
 }
+.modal-box.medium .container {
+  /*@media (max-width: @screen-xs-max) {
+                width: 800px;
+            }
+            @media (max-width: @screen-sm-max) {
+                width: 800px;
+            }
+            @media (max-width: @screen-md-max) {
+                width: 800px;
+            }*/
+  width: 100%;
+}
 .modal-box.medium .close-btn {
   right: 50px;
   top: 20px;
@@ -7377,6 +7389,10 @@ button[type="submit"] .loading {
   overflow: hidden;
   margin-bottom: 24px;
   text-decoration: none;
+}
+.game-column p {
+  color: white;
+  margin-top: 0px;
 }
 @media (max-width: 991px) {
   .game-column {
