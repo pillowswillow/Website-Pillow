@@ -218,8 +218,15 @@ li {
     z-index: 0;
     overflow: hidden;
 
-    @media (max-width: @screen-sm-min) {
+    @media (max-width: @screen-xs-max) {
         margin-top: 182px;  // THIJS: Make the video move downwards to prevent being obscured by the header appearing
+    }
+
+    @media (max-width: @screen-xs-max) {
+        width: 200%;
+        height: 100%;
+        top: -150px;
+        left: -50%;
     }
 
     video {
@@ -236,6 +243,10 @@ li {
             margin: auto;
             min-height: 50%;
             min-width: 50%;
+
+            @media (max-width: @screen-xs-max) {
+                min-height: 100%;
+            }
         }
     }
 

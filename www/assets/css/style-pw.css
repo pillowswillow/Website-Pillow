@@ -2572,9 +2572,17 @@ li {
   z-index: 0;
   overflow: hidden;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .video-bg {
     margin-top: 182px;
+  }
+}
+@media (max-width: 767px) {
+  .video-bg {
+    width: 200%;
+    height: 100%;
+    top: -150px;
+    left: -50%;
   }
 }
 .video-bg video {
@@ -2590,6 +2598,11 @@ li {
   margin: auto;
   min-height: 50%;
   min-width: 50%;
+}
+@media (max-width: 767px) {
+  .video-bg video.book {
+    min-height: 100%;
+  }
 }
 .video-bg.img-only {
   background-image: url('../video/placeholders/book-placeholder.png');
