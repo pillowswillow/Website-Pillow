@@ -7008,6 +7008,12 @@ button[type="submit"] .loading {
   height: 100%;
   padding: 50px 44px 25px;
 }
+@media (max-width: 991px) {
+  .modal-box.medium {
+    padding: 10px;
+    width: 100%;
+  }
+}
 .modal-box.medium .container {
   width: 100%;
 }
