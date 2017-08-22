@@ -138,15 +138,17 @@
 
 // Used to pull the Get it now buttons below the book video
 .pull-down-manual {
-	margin-top: 620px;
-
-	@media (max-width: @screen-xs-max) {
-		margin-top: 170px;
-	}
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
+/*.hero-section.bg1 {
+	min-height: auto !important;
+	background-color: black !important;
+	background-image: none !important;
+}*/
+
 .hero-section.bg1 {
-	@media (max-width: @screen-xs-max) {
-		min-height: 400px !important;
-	}
+	background-image: url('@{video-path}placeholders/book-placeholder.png');
 }

@@ -25,25 +25,25 @@
 		pw.resCutoff = 991;
 
 		function ActivateVideo(large) {
-			if (large) {
+			/*if (large) {
 				$("#book-l").get(0).play();
 				$("#book-s").get(0).pause();
 			}
 			else {
 				$("#book-l").get(0).pause();
 				$("#book-s").get(0).play();
-			}
+			}*/
 		}
 
 		function OnResize() {
-			ActivateVideo($(window).width() >= window.pw.resCutoff);
+			/*ActivateVideo($(window).width() >= window.pw.resCutoff);*/
 		}
 
 		function InitVideos() {
-			var el = $("#book-l").get(0);
-			$("#book-l").get(0).preload = "metadata";
+			/*var el = $("#book-l").get(0);
+			"#book-l").get(0).preload = "metadata";
 			$("#book-s").get(0).preload = "metadata";
-			OnResize();
+			OnResize();*/
 		}
 
 		window.onload = InitVideos;
@@ -64,16 +64,7 @@
 			<div class="preloader"></div>
 		</div>
 
-		<!--<section id="hero" class="hero-section ytp-player-background bg-cover window-height light-text" data-video="lZ4-8xMTeDE" data-property="{videoURL: 'https://www.youtube.com/watch?v=lZ4-8xMTeDE', containment: '#hero', autoPlay: true, realfullscreen: true, stopMovieOnBlur: false, addRaster: false, showControls: false, mute:true, startAt:0, opacity:1, gaTrack: false, mobileFallbackImage: 'assets/video/placeholders/book-placeholder.png'}">-->
-		<section id="hero" class="hero-section bg1 window-height light-text">
-			<div class="video-bg">
-				<video id="book-s" preload="metadata" loop class="book hidden-md hidden-lg" muted>
-					<source src="assets/video/book-s.mp4" type="video/mp4"/>
-				</video>
-				<video id="book-l" preload="metadata" loop class="book hidden-xs hidden-sm" muted>
-					<source src="assets/video/book-l.mp4" type="video/mp4"/>
-				</video>
-			</div>
+		<section id="hero" class="hero-section bg1 bg-cover window-height light-text">
 			<ul class="socials-nav">
 				<li class="socials-nav-item"><a href="https://twitter.com/PillowsWillow"><span class="fa fa-twitter"></span></a></li>
 				<li class="socials-nav-item"><a href="https://www.facebook.com/pillowswillow/"><span class="fa fa-facebook"></span></a></li>
@@ -81,8 +72,8 @@
 			</ul>
 			<div class="heading-block align-center subtract-height">
 				<div class="container">
-					<a href="#" class="btn btn-md invisible" data-modal-link="get-it-now">Buy now!</a>
-					<a href="#" class="btn btn-outline btn-md invisible" data-modal-link="details-sol">Trailer</a>
+					<a href="#" class="btn btn-md" data-modal-link="get-it-now">Buy now!</a>
+					<a href="#" class="btn btn-outline btn-md" data-modal-link="details-sol">Trailer</a>
 				</div>
 			</div>
 
@@ -100,6 +91,44 @@
 				</div>
 			</div>
 		</section>
+
+		<!--<section id="hero" class="hero-section ytp-player-background bg-cover window-height light-text" data-video="lZ4-8xMTeDE" data-property="{videoURL: 'https://www.youtube.com/watch?v=lZ4-8xMTeDE', containment: '#hero', autoPlay: true, realfullscreen: true, stopMovieOnBlur: false, addRaster: false, showControls: false, mute:true, startAt:0, opacity:1, gaTrack: false, mobileFallbackImage: 'assets/video/placeholders/book-placeholder.png'}">-->
+		<!--<section id="hero" class="hero-section bg1 window-height light-text">
+			<!--<div class="video-bg">
+				<video id="book-s" preload="metadata" loop class="book hidden-md hidden-lg" muted>
+					<source src="assets/video/book-s.mp4" type="video/mp4"/>
+				</video>
+				<video id="book-l" preload="metadata" loop class="book hidden-xs hidden-sm" muted>
+					<source src="assets/video/book-l.mp4" type="video/mp4"/>
+				</video>
+			</div>-->
+			<!--<div class="video-bg img-only"></div>
+			<ul class="socials-nav">
+				<li class="socials-nav-item"><a href="https://twitter.com/PillowsWillow"><span class="fa fa-twitter"></span></a></li>
+				<li class="socials-nav-item"><a href="https://www.facebook.com/pillowswillow/"><span class="fa fa-facebook"></span></a></li>
+				<li class="socials-nav-item"><a href="https://www.instagram.com/pillowswillow/?hl=en"><span class="fa fa-instagram"></span></a></li>
+			</ul>
+			<div class="heading-block align-center subtract-height">
+				<div class="container">
+					<a href="#" class="btn btn-md" data-modal-link="get-it-now">Buy now!</a>
+					<a href="#" class="btn btn-outline btn-md" data-modal-link="details-sol">Trailer</a>
+				</div>
+			</div>
+
+			<div class="heading-block align-center pull-down-manual remove-padding">
+				<div class="container">
+					<div class="btns-container remove-padding">
+						<a href="#">
+							<img src="assets/img/gearvr-logo-white.png" width="150" height="88" />
+						</a>
+
+						<a href="#">
+							<img src="assets/img/daydream-logo.png" width="150" height="88" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>-->
 
 		<header class="header header-black">
 			<div class="header-wrapper">
@@ -153,7 +182,7 @@
 						<br/>
 						<h6>Dark times arise</h6>
 						<p>A greedy mothking steals the sun, and it’s up to Nerow to get it back. As he sets out on his journey, however, one tiny obstacle comes to light: Nerow is afraid of the dark. Will you help him find the light and save the day?</p>
-						<a href="#" data-modal-link="get-it-now" class="btn btn-outline-clr invisible" style="margin: 30px 0 0">Buy now</a>
+						<a href="#" data-modal-link="get-it-now" class="btn btn-outline-clr" style="margin: 30px 0 0">Buy now</a>
 					</div>
 				</div>
 

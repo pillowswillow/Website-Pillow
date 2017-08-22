@@ -252,16 +252,34 @@ li {
     }
 
     &.img-only {
+        width: 100% !important;
+        height: 100% !important;
+        //top: -80px;
+        left: 0;
+
         background-image: url('@{video-path}placeholders/book-placeholder.png');
         background-position: center top;
         background-repeat: no-repeat;
+        background-size: 100% auto;
 
-        @media (max-width: @screen-md-max) {
-            background-size: @screen-md-max auto;
+        @media (max-width: @screen-xs-max) {
+            top: -80px;
+            background-size: @screen-xs auto;
         }
 
-        @media (min-width: @screen-lg) {
-            background-size: 1903px auto;
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+            top: 0;
+            background-size: @screen-sm auto;
+        }
+
+        @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+            top: 0;
+            background-size: @screen-md auto;
+        }
+
+        @media (min-width: @screen-lg-min) {
+            top: 0;
+            background-size: 100% auto;
         }
     }
 }
