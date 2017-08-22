@@ -7498,15 +7498,15 @@ button[type="submit"] .loading {
 }
 @media (max-width: 767px) {
   .trailer-box {
-    min-height: 100px;
+    min-height: 150px;
   }
 }
-@media (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .trailer-box {
-    min-height: 200px;
+    min-height: 250px;
   }
 }
-@media (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .trailer-box {
     min-height: 300px;
   }

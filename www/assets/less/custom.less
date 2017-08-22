@@ -117,12 +117,12 @@
 	height: auto;
 	min-height: 600px;
 	@media (max-width: @screen-xs-max) {
-		min-height: 100px;
+		min-height: 150px;
 	}
-	@media (max-width: @screen-sm-max) {
-		min-height: 200px;
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+		min-height: 250px;
 	}
-	@media (max-width: @screen-md-max) {
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
 		min-height: 300px;
 	}
 }
