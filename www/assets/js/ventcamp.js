@@ -808,6 +808,7 @@ Ventcamp = {
         }
     },
 
+    //THIJS: Unused, this is the one with the textbox next to it!
     gallerySliderInit: function () {
         var _this = this;
 
@@ -1178,6 +1179,20 @@ Ventcamp = {
         }
     },
 
+    //THIJS: Screenshot slider on front page
+    initSlider: function() {
+        
+        $(".slidergallery").slick({
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           autoplay: true,
+           autoplaySpeed: 5000,
+           lazyLoad: 'progressive'
+           //dots: true,    SPACE?
+           //speed: 300,    WAT DO?
+        });
+    },
+
     init: function (options) {
         this.options = $.extend(this.defaults, options, $('body').data());
 
@@ -1197,7 +1212,7 @@ Ventcamp = {
 
         if ( this.options.pseudoSelect ) this.initPseudoSelect();
 
-        if ( typeof google != 'undefined') this.initGoogleMap();
+        //if ( typeof google != 'undefined') this.initGoogleMap();    // This is already not being called because we are excluding GMap script :)
 
         this.windowHeightBlock();
 
@@ -1210,6 +1225,8 @@ Ventcamp = {
         this.gallerySliderInit();
 
         this.setEventHandlers();
+
+        this.initSlider();
     }
 }
 
