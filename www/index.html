@@ -18,6 +18,8 @@
 
 	<link rel="stylesheet" type="text/css" href="assets/css/custom-animations.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style-pw.css" />
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 	
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> DISABLED BECAUSE NO MAP -->
 	<script>
@@ -85,8 +87,8 @@
 							<img src="assets/img/gearvr-logo-white.png" class="hidden-xs hidden-sm" width="150" height="88" />
 						</a>
 
-						<a href="#">
-							<img src="assets/img/daydream-logo.png" class="hidden-xs hidden-sm" width="150" height="88" />
+						<a>
+							<img src="assets/img/daydream-logo-disabled.png" class="hidden-xs hidden-sm" width="150" height="88" />
 						</a>
 					</div>
 				</div>
@@ -190,22 +192,36 @@
 				<br/><br/><br/>
 
 			</div>
-			<div class="container-fluid">
+
+			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-6 col-lg-3">
-						<img src="assets/img/games/screenshots/sparkoflight01.jpg" alt="">
+					<div class="slidergallery">
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight01.jpg" alt="">
+						</div>
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight02.jpg" alt="">
+						</div>
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight03.jpg" alt="">
+						</div>
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight04.jpg" alt="">
+						</div>
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight05.jpg" alt="">
+						</div>
+						<!--<div class="col-xs-12">
+							<img data-lazy="assets/img/nerow-suit-promotional.jpg" alt="">
+							<div class="gallery-caption">
+								<h6>Gear up for your own adventure</h6>
+								<p>Nerow's suit will be available for purchase soon!</p>
+							</div>
+						</div>-->
 					</div>
-					<div class="col-xs-12 col-md-6 col-lg-3">
-						<img src="assets/img/games/screenshots/sparkoflight02.jpg" alt="">
-					</div>
-					<div class="col-xs-12 col-md-6 col-lg-3">
-						<img src="assets/img/games/screenshots/sparkoflight03.jpg" alt="">
-					</div>
-					<div class="col-xs-12 col-md-6 col-lg-3">
-						<img src="assets/img/games/screenshots/sparkoflight04.jpg" alt="">
-					</div>
-				</div>
+				</div>	
 			</div>
+
 		</section>
 	</section>
 
@@ -289,11 +305,11 @@
 			<br/>
 			<div class="align-center">
 				<a href="https://www.oculus.com/experiences/gear-vr/1503070033096704/" class="underline-img">
-					<img src="assets/img/gearvr-logo-white.png" width="200" height="110" />
+					<img src="assets/img/gearvr-logo.png" width="200" height="110" />
 				</a>
 
-				<a href="#" class="underline-img">
-					<img src="assets/img/daydream-logo.png" width="200" height="110" />
+				<a class="underline-img">
+					<img src="assets/img/daydream-logo-disabled.png" width="200" height="110" />
 				</a>
 			</div>
 
@@ -414,6 +430,7 @@
 		<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
 		<script type="text/javascript" src="assets/js/modal-box.js"></script>
 		<script type="text/javascript" src="assets/js/ventcamp.js"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
 	</body>
 	</html>
