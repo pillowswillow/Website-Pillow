@@ -29,7 +29,7 @@ Ventcamp = {
         smoothScrollSpeed: 800,
         pseudoSelect: true,
         ajaxedForm: true,
-        ajaxedFormSuccessMsg: 'Success',
+        ajaxedFormSuccessMsg: 'Thank you for your message!',
         ajaxedFormErrorMsg: 'An error occured. Please try again later.',
         toastrPositionClass: 'toast-top-full-width'
     },
@@ -1183,13 +1183,11 @@ Ventcamp = {
     initSlider: function() {
         
         $(".slidergallery").slick({
-           slidesToShow: 1,
+           slidesToShow: 2,
            slidesToScroll: 1,
            autoplay: true,
            autoplaySpeed: 5000,
            lazyLoad: 'progressive'
-           //dots: true,    SPACE?
-           //speed: 300,    WAT DO?
         });
     },
 

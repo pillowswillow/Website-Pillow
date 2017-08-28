@@ -7585,3 +7585,25 @@ button[type="submit"] .loading {
   padding: 24px;
   background-color: rgba(255, 255, 255, 0.75);
 }
+.store-link-disabled {
+  opacity: 0.1;
+}
+.testimonial-quote {
+  margin-top: 48px;
+}
+.testimonial-quote a {
+  text-decoration: none;
+}
+.testimonial-quote a h6 {
+  font-weight: normal;
+  font-style: italic;
+}
+.testimonial-quote a p {
+  font-family: "Cinzel", serif;
+  font-size: 15px;
+  color: #51545b;
+  text-align: center;
+}
+.testimonial-quote a p::before {
+  content: "-- ";
+}

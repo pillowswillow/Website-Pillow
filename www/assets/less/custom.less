@@ -230,3 +230,31 @@
 	.store-link-disabled {
 		opacity: 0.1;
 	}
+
+	.testimonial-quote {
+		margin-top: 48px;
+
+
+		a {
+			text-decoration: none;
+
+			h6 {
+				font-weight: normal;
+				font-style: italic;
+			}
+
+			p {
+				font-family: @font-family-deco;
+				font-size: @font-size-base;
+				color: @text-gray;
+				text-align: center;
+
+				&::before {
+					content: "-- ";
+				}
+			}
+		}
+
+
+		
+	}
