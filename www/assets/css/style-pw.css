@@ -7520,8 +7520,68 @@ button[type="submit"] .loading {
 	min-height: auto !important;
 	background-color: black !important;
 	background-image: none !important;
-}*/
+	}*/
 .hero-section.bg1 {
   background-image: url('../video/placeholders/book-static01.jpg');
   background-attachment: scroll;
+}
+.slick-arrow {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+  z-index: 1;
+}
+.slick-arrow:hover {
+  color: transparent;
+  outline: none;
+}
+.slick-arrow:hover::before {
+  opacity: 1;
+}
+.slick-arrow:disabled {
+  color: transparent;
+  outline: none;
+  display: none;
+}
+.slick-arrow::before {
+  color: #fff;
+  opacity: 0.65;
+  font-family: "Fontawesome";
+  font-size: 40px;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-arrow.slick-prev {
+  left: 25px;
+}
+.slick-arrow.slick-prev::before {
+  content: "\f137";
+}
+.slick-arrow.slick-next {
+  right: 25px;
+}
+.slick-arrow.slick-next::before {
+  content: "\f138";
+}
+.gallery-caption {
+  width: 35%;
+  min-height: 10%;
+  position: absolute;
+  bottom: 12px;
+  right: 24px;
+  display: block;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
