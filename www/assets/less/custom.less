@@ -144,117 +144,127 @@
 }
 
 /*.hero-section.bg1 {
-	min-height: auto !important;
-	background-color: black !important;
-	background-image: none !important;
-	}*/
+min-height: auto !important;
+background-color: black !important;
+background-image: none !important;
+}*/
 
-	.hero-section.bg1 {
-		background-image: url('@{video-path}placeholders/book-static01.jpg');
-		background-attachment: scroll;
-	}
-	
-	// Styling the arrows besides the gallery slider
-	.slick-arrow {
-		font-size: 0;
-		line-height: 0;
+.hero-section.bg1 {
+	background-image: url('@{video-path}placeholders/book-static01.jpg');
+	background-attachment: scroll;
+}
+
+// Copy settings for iFrame video to <video> element
+.modal-box.iframe-box.iframe-video {
+	video {
 		position: absolute;
-		top: 50%;
-		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		margin: 0;
+	}
+}
 
-		width: 40px;
-		height: 40px;
-		margin-top: -20px;
-		padding: 0;
+// Styling the arrows besides the gallery slider
+.slick-arrow {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 50%;
+	display: block;
 
-		cursor: pointer;
-		color: transparent;
-		border: none;
-		outline: none;
-		background: transparent;
-		z-index: 1;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	padding: 0;
 
-		// Different states for the background circle
-		&:hover {
-			color: transparent;
-			outline: none;
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: none;
+	background: transparent;
+	z-index: 1;
 
-			&::before {
-				opacity: 1;
-			}
-		}
+// Different states for the background circle
+&:hover {
+	color: transparent;
+	outline: none;
 
-		&:disabled {
-			color: transparent;
-			outline: none;
+	&::before {
+		opacity: 1;
+	}
+}
+
+&:disabled {
+	color: transparent;
+	outline: none;
 			display: none;	// Hide if not available!
 		}
 
-		// The direction icon
-		&::before {
-			color: @white;
-			opacity: 0.65;
-			font-family: @font-family-fontawesome;
-			font-size: 40px;
-			line-height: 40px;
+// The direction icon
+&::before {
+	color: @white;
+	opacity: 0.65;
+	font-family: @font-family-fontawesome;
+	font-size: 40px;
+	line-height: 40px;
 
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+&.slick-prev {
+	left: 25px;
+	&::before {
+		content: "\f137";
+	}
+}
+&.slick-next {
+	right: 25px;
+	&::before {
+		content: "\f138";				
+	}
+}
+}
+
+.gallery-caption {
+	width: 35%;
+	min-height: 10%;
+	position: absolute;
+	bottom: 12px;
+	right: 24px;
+	display: block;
+	padding: 24px;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.store-link-disabled {
+	opacity: 0.1;
+}
+
+.testimonial-quote {
+	margin-top: 48px;
+
+
+	a {
+		text-decoration: none;
+
+		h6 {
+			font-weight: normal;
+			font-style: italic;
 		}
 
-		&.slick-prev {
-			left: 25px;
+		p {
+			font-family: @font-family-deco;
+			font-size: @font-size-base;
+			color: @text-gray;
+			text-align: center;
+
 			&::before {
-				content: "\f137";
-			}
-		}
-		&.slick-next {
-			right: 25px;
-			&::before {
-				content: "\f138";				
+				content: "-- ";
 			}
 		}
 	}
-
-	.gallery-caption {
-		width: 35%;
-		min-height: 10%;
-		position: absolute;
-		bottom: 12px;
-		right: 24px;
-		display: block;
-		padding: 24px;
-		background-color: rgba(255, 255, 255, 0.75);
-	}
-
-	.store-link-disabled {
-		opacity: 0.1;
-	}
-
-	.testimonial-quote {
-		margin-top: 48px;
-
-
-		a {
-			text-decoration: none;
-
-			h6 {
-				font-weight: normal;
-				font-style: italic;
-			}
-
-			p {
-				font-family: @font-family-deco;
-				font-size: @font-size-base;
-				color: @text-gray;
-				text-align: center;
-
-				&::before {
-					content: "-- ";
-				}
-			}
-		}
-
-
-		
-	}
+}

@@ -29,7 +29,7 @@ Ventcamp = {
         smoothScrollSpeed: 800,
         pseudoSelect: true,
         ajaxedForm: true,
-        ajaxedFormSuccessMsg: 'Thank you for your message!',
+        ajaxedFormSuccessMsg: 'Success',
         ajaxedFormErrorMsg: 'An error occured. Please try again later.',
         toastrPositionClass: 'toast-top-full-width'
     },
@@ -79,9 +79,9 @@ Ventcamp = {
 
             $('.animated').appear(function() {
                 var $el = $(this),
-                    animation = $el.data('animation'),
-                    animationDelay = $el.data('delay') || 0,
-                    animationDuration = $el.data('duration') || 1000;
+                animation = $el.data('animation'),
+                animationDelay = $el.data('delay') || 0,
+                animationDuration = $el.data('duration') || 1000;
 
                 if ( _this.options.animations ) {
                     $el.css({
@@ -142,15 +142,15 @@ Ventcamp = {
 
     calculateMenuSizes: function () {
         var _this = this,
-            $dropdownItem = $('.navigation-item.dropdown'),
-            $navbarCollapse = $('.navbar-collapse'),
-            winHeight = window.innerHeight;
+        $dropdownItem = $('.navigation-item.dropdown'),
+        $navbarCollapse = $('.navbar-collapse'),
+        winHeight = window.innerHeight;
 
         if ( $dropdownItem.length ) {
             $dropdownItem.each( function () {
                 var $this = $(this),
-                    $dropdown = $this.find('.dropdown-menu'),
-                    headerHeight = $dropdownItem.closest('header').outerHeight();
+                $dropdown = $this.find('.dropdown-menu'),
+                headerHeight = $dropdownItem.closest('header').outerHeight();
 
                 if ( !_this.mobileDevice ) {
                     $dropdown.css( 'max-height', winHeight - headerHeight - 50 );
@@ -176,7 +176,7 @@ Ventcamp = {
 
     windowHeightBlock: function () {
         var $blocks = $('.window-height'),
-            height = window.innerHeight;
+        height = window.innerHeight;
 
         if ( $blocks.length ) {
             $blocks.each(function () {
@@ -193,10 +193,10 @@ Ventcamp = {
         if ( $blocks.length ) {
             $blocks.each( function () {
                 var $el = $(this),
-                    $parent = $el.parent(),
-                    elHeight = $el.outerHeight(),
-                    parentHeight = $parent.outerHeight(),
-                    padding = (parentHeight - elHeight) / 2;
+                $parent = $el.parent(),
+                elHeight = $el.outerHeight(),
+                parentHeight = $parent.outerHeight(),
+                padding = (parentHeight - elHeight) / 2;
 
                 if ( padding >= 0 ) {
                     $parent.css({'padding-top': padding, 'padding-bottom': 0 });
@@ -212,8 +212,8 @@ Ventcamp = {
 
         $('.ytp-player-background').each( function() {
             var $el = $(this),
-                $player,
-                controlsTempalte;
+            $player,
+            controlsTempalte;
 
             if ( $el.data('video') && $el.data('video').length ) {
                 $el.css('background-image', 'url(https://i.ytimg.com/vi/' + $el.data('video') + '/maxresdefault.jpg)')
@@ -245,11 +245,11 @@ Ventcamp = {
 
     makePseudoSelect: function (i, el) {
         var $el = $(el),
-            $options = $el.find('option'),
-            $pseudoSelect = $('<div class="pseudo-select"></div>'),
-            $input = $('<input type="text" />'),
-            $field = $('<span class="pseudo-select-field"></span>'),
-            $dropdown = $('<ul class="pseudo-select-dropdown"></ul>');
+        $options = $el.find('option'),
+        $pseudoSelect = $('<div class="pseudo-select"></div>'),
+        $input = $('<input type="text" />'),
+        $field = $('<span class="pseudo-select-field"></span>'),
+        $dropdown = $('<ul class="pseudo-select-dropdown"></ul>');
 
         $options.each(function () {
             $li = $('<li class="pseudo-select-dropdown-item"></li>');
@@ -273,44 +273,44 @@ Ventcamp = {
         $el.remove();
 
         var closePseudoSelect = function () {
-                $dropdown.stop(true, true).slideUp(150);
-                setTimeout(function () { $el.removeClass('open'); }, 150);
-            },
-            openPseudoSelect = function () {
-                $el.addClass('open');
-                $dropdown.stop(true, true).slideDown(250);
-            },
-            selectItem = function ($li) {
-                var value = $li.data('value'),
-                    text = $li.text(),
-                    dropdownHeight = $dropdown.outerHeight(),
-                    elHeight = $li.outerHeight(),
-                    scrollTop = $dropdown.scrollTop(),
-                    elemPosition = $li.position().top;
+            $dropdown.stop(true, true).slideUp(150);
+            setTimeout(function () { $el.removeClass('open'); }, 150);
+        },
+        openPseudoSelect = function () {
+            $el.addClass('open');
+            $dropdown.stop(true, true).slideDown(250);
+        },
+        selectItem = function ($li) {
+            var value = $li.data('value'),
+            text = $li.text(),
+            dropdownHeight = $dropdown.outerHeight(),
+            elHeight = $li.outerHeight(),
+            scrollTop = $dropdown.scrollTop(),
+            elemPosition = $li.position().top;
 
-                if ( elemPosition + elHeight > dropdownHeight ) {
-                    $dropdown.scrollTop(elHeight + elemPosition - dropdownHeight + scrollTop);
-                }else if ( elemPosition < 0 ) {
-                    $dropdown.scrollTop(scrollTop + elemPosition);
-                }
-
-                $li.addClass('selected').siblings('li').removeClass('selected');
-                $input.val(value);
-                $field.text(text);
-                $input.trigger('change');
+            if ( elemPosition + elHeight > dropdownHeight ) {
+                $dropdown.scrollTop(elHeight + elemPosition - dropdownHeight + scrollTop);
+            }else if ( elemPosition < 0 ) {
+                $dropdown.scrollTop(scrollTop + elemPosition);
             }
+
+            $li.addClass('selected').siblings('li').removeClass('selected');
+            $input.val(value);
+            $field.text(text);
+            $input.trigger('change');
+        }
 
         $input.on('focus.pseudoSelect', openPseudoSelect);
         $input.on('blur.pseudoSelect', closePseudoSelect);
 
         $input.on('keydown', function (event) {
             var $li = $dropdown.find('li').not('.disabled'),
-                $liSelected = $dropdown.find('li.selected').not('.disabled'),
-                index = $.map($li, function (el, i) { if ( $(el).is('.selected')) { return i; } })[0],
-                nextIndex = (index < $li.length - 1) ? index + 1 : 0,
-                prevIndex = index - 1,
-                $prev = $li.eq(prevIndex),
-                $next = $li.eq(nextIndex);
+            $liSelected = $dropdown.find('li.selected').not('.disabled'),
+            index = $.map($li, function (el, i) { if ( $(el).is('.selected')) { return i; } })[0],
+            nextIndex = (index < $li.length - 1) ? index + 1 : 0,
+            prevIndex = index - 1,
+            $prev = $li.eq(prevIndex),
+            $next = $li.eq(nextIndex);
 
             if ( event.keyCode == 38 ) {
                 if ( $liSelected.length ) {
@@ -366,8 +366,8 @@ Ventcamp = {
 
         $nav.each(function () {
             var $this = $(this),
-                $active = $this.find('li.active > a'),
-                $field = $('<span class="nav-current">' + $active.html() + '</span>');
+            $active = $this.find('li.active > a'),
+            $field = $('<span class="nav-current">' + $active.html() + '</span>');
 
             $this.wrapAll('<div class="nav-wrapper"></div>')
 
@@ -407,9 +407,9 @@ Ventcamp = {
         }
 
         var validateOptions,
-            submitHandler,
-            doneHandler,
-            failHandler;
+        submitHandler,
+        doneHandler,
+        failHandler;
 
         submitHandler = function (event) {
             var form = this;
@@ -456,7 +456,7 @@ Ventcamp = {
 
             submitHandler: function (form) {
                 var $input = $(form).find('input[type="submit"]'),
-                    $button = $(form).find('button[type="submit"]');
+                $button = $(form).find('button[type="submit"]');
 
                 if ( $button.length ) {
                     $button.append('<span class="loading fa fa-refresh"></span>');
@@ -522,14 +522,14 @@ Ventcamp = {
                     event.preventDefault();
 
                     var $form = $(this),
-                        $input = $form.find('input[type="submit"]'),
-                        $button = $form.find('button[type="submit"]'),
-                        $fullnameField = '',
-                        $emailField = $form.find('[name=NewsletterEmail]'),
-                        $responseBlock = $form.find('.response'),
-                        email = $emailField.val(),
-                        first_name = '',
-                        last_name = '';
+                    $input = $form.find('input[type="submit"]'),
+                    $button = $form.find('button[type="submit"]'),
+                    $fullnameField = '',
+                    $emailField = $form.find('[name=NewsletterEmail]'),
+                    $responseBlock = $form.find('.response'),
+                    email = $emailField.val(),
+                    first_name = '',
+                    last_name = '';
 
                     if ($(this).find('[name=NewsletterName]') .length > 0){
                         $fullnameField = $form.find('[name=NewsletterName]');
@@ -580,17 +580,17 @@ Ventcamp = {
                 var map, marker, geocoder, service;
 
                 var icon = '/assets/img/marker-46x46.png',
-                    address,
-                    markerLatLng,
-                    offsetX,
-                    offsetY,
-                    relativeOffset,
-                    balloons,
-                    mapOptions = {
-                        zoom: 14,
-                        scrollwheel: false,
-                        mapTypeControl: false
-                    };
+                address,
+                markerLatLng,
+                offsetX,
+                offsetY,
+                relativeOffset,
+                balloons,
+                mapOptions = {
+                    zoom: 14,
+                    scrollwheel: false,
+                    mapTypeControl: false
+                };
 
                 function createMap () {
                     mapOptions.center = markerLatLng
@@ -673,29 +673,29 @@ Ventcamp = {
 
                 function centerMap(map, offsetX, offsetY, relative) {
                     var offsetX = (typeof offsetX == 'number' ? offsetX : 0),
-                        offsetY = (typeof offsetY == 'number' ? offsetY : 0),
-                        zoom = map.getZoom(),
-                        scale = Math.pow( 2, zoom ),
-                        northEast = map.getBounds().getNorthEast(),
-                        southWest = map.getBounds().getSouthWest(),
-                        width = Math.abs( northEast.lng() - southWest.lng() ),
-                        height = Math.abs( northEast.lat() - southWest.lat() ),
-                        point1 = map.getProjection().fromLatLngToPoint( map.getCenter() ),
-                        point2 = new google.maps.Point(
-                            offsetX / scale,
-                            offsetY / scale
+                    offsetY = (typeof offsetY == 'number' ? offsetY : 0),
+                    zoom = map.getZoom(),
+                    scale = Math.pow( 2, zoom ),
+                    northEast = map.getBounds().getNorthEast(),
+                    southWest = map.getBounds().getSouthWest(),
+                    width = Math.abs( northEast.lng() - southWest.lng() ),
+                    height = Math.abs( northEast.lat() - southWest.lat() ),
+                    point1 = map.getProjection().fromLatLngToPoint( map.getCenter() ),
+                    point2 = new google.maps.Point(
+                        offsetX / scale,
+                        offsetY / scale
                         ),
-                        centerPoint = new google.maps.Point(
-                            point1.x - point2.x,
-                            point1.y - point2.y
+                    centerPoint = new google.maps.Point(
+                        point1.x - point2.x,
+                        point1.y - point2.y
                         ),
-                        center = map.getProjection().fromPointToLatLng( centerPoint );
+                    center = map.getProjection().fromPointToLatLng( centerPoint );
 
                     if ( relative ) {
                         center = new google.maps.LatLng(
                             map.getCenter().lat() + height * offsetY / 100,
                             map.getCenter().lng() - width * offsetX / 100
-                        );
+                            );
                     }
 
                     map.setCenter( center );
@@ -751,8 +751,8 @@ Ventcamp = {
                     failCallback();
                 }
             });
-        }
-    },
+}
+},
 
     // count down timer
     countdownInit: function () {
@@ -815,13 +815,13 @@ Ventcamp = {
         if ( $('.gallery.light-slider').length && typeof $.fn.bxSlider == 'function' ) {
             $('.gallery.light-slider').each(function () {
                 var $container = $(this),
-                    $imgSLider = $container.find('.img-slider'),
-                    $descrSlider = $container.find('.description-slider');
+                $imgSLider = $container.find('.img-slider'),
+                $descrSlider = $container.find('.description-slider');
 
                 $imgSLider.find('li > img').each(function () {
                     var $this = $(this),
-                        $li = $this.parent(),
-                        imgSrc = $this.attr('src');
+                    $li = $this.parent(),
+                    imgSrc = $this.attr('src');
 
                     $li.css('background-image', 'url("' + imgSrc + '")').data('imgSrc', imgSrc);
                     $this.remove();
@@ -897,16 +897,16 @@ Ventcamp = {
 
         if ( typeof $.fn.waypoint != 'undefined' ) {
             var $menuLinks = $('.navigation-list a').not('[href="#"]').filter(function () {
-                    return /#\w+/.test(this.href);
-                }),
-                enterHandler = function( that, direction ) {
-                    var id = that.id,
-                        $item = $('.navigation-list a').filter(function () {
-                            return this.href.indexOf('#' + that.id) > -1;
-                        });
+                return /#\w+/.test(this.href);
+            }),
+            enterHandler = function( that, direction ) {
+                var id = that.id,
+                $item = $('.navigation-list a').filter(function () {
+                    return this.href.indexOf('#' + that.id) > -1;
+                });
 
-                    $('.navigation-list .active').removeClass('active');
-                    $item.addClass('active');
+                $('.navigation-list .active').removeClass('active');
+                $item.addClass('active');
 
                     // push anchor to browser URL
                     if ( _this.options.onePageNavHashChange ){
@@ -919,91 +919,91 @@ Ventcamp = {
                 },
                 leaveHandler = function ( that, direction ) {
                     var $item = $('.navigation-list a').filter(function () {
-                            return this.href.indexOf('#' + that.id) > -1;
-                        });
+                        return this.href.indexOf('#' + that.id) > -1;
+                    });
 
                     $item.removeClass('active');
                 };
 
-            $menuLinks.each(function (index) {
-                var href = this.href,
+                $menuLinks.each(function (index) {
+                    var href = this.href,
                     anchorId = href.substring(href.indexOf('#'), href.length),
                     $block = $(anchorId);
 
-                if ( $block.length ) {
-                    $block.waypoint(function (direction) {
-                        if ( direction == 'down' ) {
-                            enterHandler( this.element, direction );
-                        }
+                    if ( $block.length ) {
+                        $block.waypoint(function (direction) {
+                            if ( direction == 'down' ) {
+                                enterHandler( this.element, direction );
+                            }
 
-                    }, { offset: 0 });
+                        }, { offset: 0 });
 
-                    $block.waypoint(function (direction) {
-                        if ( direction == 'down' ) {
-                            leaveHandler( this.element, direction );
+                        $block.waypoint(function (direction) {
+                            if ( direction == 'down' ) {
+                                leaveHandler( this.element, direction );
 
-                        }else {
-                            enterHandler( this.element, direction );
-                        }
+                            }else {
+                                enterHandler( this.element, direction );
+                            }
 
-                    }, { offset: -$block.outerHeight() });
+                        }, { offset: -$block.outerHeight() });
 
-                    $block.waypoint(function (direction) {
-                        if ( direction == 'up' ) {
-                            leaveHandler( this.element, direction );
-                        }
+                        $block.waypoint(function (direction) {
+                            if ( direction == 'up' ) {
+                                leaveHandler( this.element, direction );
+                            }
 
-                    }, { offset: '100%' });
-                }
-            });
+                        }, { offset: '100%' });
+                    }
+                });
 
-            $('body').waypoint(function () {
-                var id = 'hero',
+                $('body').waypoint(function () {
+                    var id = 'hero',
                     $item = $('.navigation-list a[href="#' + id + '"]');
 
-                $('.navigation-list .active').removeClass('active');
+                    $('.navigation-list .active').removeClass('active');
 
-                if ( $item.length ) {
-                    $item.addClass('active');
+                    if ( $item.length ) {
+                        $item.addClass('active');
 
-                    if ( _this.options.onePageNavHashChange ){
-                        if ( history.pushState ) {
-                            history.pushState(null, null, '#' + id);
-                        }else {
-                            _this.log('Browser don\'t support history API');
+                        if ( _this.options.onePageNavHashChange ){
+                            if ( history.pushState ) {
+                                history.pushState(null, null, '#' + id);
+                            }else {
+                                _this.log('Browser don\'t support history API');
+                            }
                         }
                     }
-                }
-            }, { offset: -100 });
+                }, { offset: -100 });
 
-            $('body').on( 'click', 'a[href*="#"]', function (event) {
-                var href = $(this).attr('href'),
+                $('body').on( 'click', 'a[href*="#"]', function (event) {
+                    var href = $(this).attr('href'),
                     anchorId = href.substring(href.indexOf('#'), href.length);
 
-                if ( $(this).attr('data-toggle') && $(this).attr('data-toggle').length ) {
-                    return;
+                    if ( $(this).attr('data-toggle') && $(this).attr('data-toggle').length ) {
+                        return;
 
-                }
+                    }
 
-                if ( $(anchorId).length ) {
-                    _this.anchorClickHandler(anchorId);
+                    if ( $(anchorId).length ) {
+                        _this.anchorClickHandler(anchorId);
 
-                    return false;
-                }
-            });
+                        return false;
+                    }
+                });
 
-        }else {
-            this.log( 'Can\'t find jQuery.waypoint function' );
+            }else {
+                this.log( 'Can\'t find jQuery.waypoint function' );
 
-        }
-    },
+            }
+        },
 
     //custom smooth scrolling for all onpage anchors
     anchorClickHandler: function(anchorId) {
         var _this = this,
-            offsetTop = $(anchorId).offset().top - $('.header').height(),
-            $nav = $('.navigation-list'),
-            $elems = $nav.find('a[href="' + anchorId + '"]');
+        offsetTop = $(anchorId).offset().top - $('.header').height(),
+        $nav = $('.navigation-list'),
+        $elems = $nav.find('a[href="' + anchorId + '"]');
 
         $('body, html').animate({
             scrollTop: offsetTop
@@ -1027,8 +1027,8 @@ Ventcamp = {
     checkHeaderStatus: function () {
         if ( $('header').length ) {
             var $header = $('header'),
-                scrollTop = $(window).scrollTop(),
-                headerTop = $header.offset().top;
+            scrollTop = $(window).scrollTop(),
+            headerTop = $header.offset().top;
 
             if ( scrollTop >= headerTop ) {
                 this.stickMenu();
@@ -1091,7 +1091,7 @@ Ventcamp = {
 
     styleSwitcherColorHandler: function (event, $el) {
         var $this = $el,
-            colorName = $this.attr('data-color');
+        colorName = $this.attr('data-color');
 
         event.preventDefault();
 
@@ -1142,7 +1142,7 @@ Ventcamp = {
         $('.navbar-collapse').on( 'mousewheel DOMMouseScroll', function (event) {
             if ( _this.mobileDevice ) {
                 var e0 = event.originalEvent,
-                    delta = e0.wheelDelta || -e0.detail;
+                delta = e0.wheelDelta || -e0.detail;
 
                 this.scrollTop -= delta;
                 event.preventDefault();
@@ -1181,15 +1181,67 @@ Ventcamp = {
 
     //THIJS: Screenshot slider on front page
     initSlider: function() {
-        
-        $(".slidergallery").slick({
+
+        $('.slidergallery').slick({
            slidesToShow: 2,
            slidesToScroll: 1,
            autoplay: true,
            autoplaySpeed: 5000,
            lazyLoad: 'progressive'
-        });
+           //dots: true,    SPACE?
+           //speed: 300,    WAT DO?
+       });
     },
+
+    /*//THIJS: Set up the trailer video link for details-sol modalbox (locally hosted where Youtube is blocked!)
+    initTrailerVideo: function() {
+        var blockedList = [
+        "China",
+        "Crimea",
+        "Cuba",
+        "Iran",
+        "North Korea",
+        "Sudan",
+        "Syria"
+        ];
+
+        // http://userinfo.io/ for more information!
+        var blocked = true;
+        $.getJSON("https://api.userinfo.io/userinfos", function(data) {
+            var blocked = true;
+            if (data != null) {
+                if (data.country.name != null && blockedList.indexOf(data.country.name) == -1) {
+                    blocked = false;    // Country is not on blacklist
+                }
+            }
+
+            if (blocked) {
+                // Substitute locally hosted HTML5 video
+                console.log("Youtube is blocked in your region! Substituting local copy of videos. For faster loading, please use a VPN.");
+                $('#sol_trailer_anchor')
+                .before(
+                    "<video id='trailer-player' controls><source src='assets/video/sol_trailer_720.mp4' type='video/mp4'/></video>"
+                    );
+                
+                // Set up extra events for modal closes and such
+                var player = $('#trailer-player');
+                console.log($('#details-sol span.close-btn'));
+                $('#details-sol span.close-btn').on('click', function() {
+                    console.log("STOPPPED");
+                    player.trigger('pause');
+                });
+            }
+            else {
+                // Use regular youtube embed
+                $('#sol_trailer_anchor')
+                .before(
+                    "<iframe src='https://www.youtube.com/embed/yoVucmzfa_o?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe>"
+                    );
+            }    
+        });
+
+        
+    },*/
 
     init: function (options) {
         this.options = $.extend(this.defaults, options, $('body').data());
@@ -1224,7 +1276,10 @@ Ventcamp = {
 
         this.setEventHandlers();
 
-        this.initSlider();
+        // NOTE: Define these two data fields as true on pages where they are used!
+        if (this.options.usesliders) this.initSlider();
+
+        /*if (this.options.usetrailers) this.initTrailerVideo();*/
     }
 }
 

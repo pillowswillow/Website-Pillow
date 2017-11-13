@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Home</title>
+
+	<meta name="description" content="Pillow's Willow VR Studio - Spark of Light">
+	<meta name="keywords" content="VR, Games, Gear, GearVR, Oculus, Daydream, Google">
+	<meta name="author" content="Pillow's Willow VR Studio">
+
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.jpg">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.jpg">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/custom-animations.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style-pw.css" />
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> DISABLED BECAUSE NO MAP -->
+	<script>
+		/*	OLD SCRIPT TO SWAP VIDEOS DEPENDING ON SCREEN SIZE
+		window.pw = {};
+		pw.resCutoff = 991;
+
+		function ActivateVideo(large) {
+			if (large) {
+				$("#book-l").get(0).play();
+				$("#book-s").get(0).pause();
+			}
+			else {
+				$("#book-l").get(0).pause();
+				$("#book-s").get(0).play();
+			}
+		}
+
+		function OnResize() {
+			ActivateVideo($(window).width() >= window.pw.resCutoff);
+		}
+
+		function InitVideos() {
+			var el = $("#book-l").get(0);
+			"#book-l").get(0).preload = "metadata";
+			$("#book-s").get(0).preload = "metadata";
+			OnResize();
+		}
+
+		window.onload = InitVideos;
+		window.onresize = OnResize;*/
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Implement bottom-align class -->
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-105319807-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+
+	</head>
+
+	<body>
+		<div class="preloader-mask">
+			<div class="preloader"></div>
+		</div>
+
+		<section id="hero" class="hero-section bg1 bg-cover window-height light-text">
+			<ul class="socials-nav">
+				<li class="socials-nav-item"><a href="https://twitter.com/PillowsWillow"><span class="fa fa-twitter"></span></a></li>
+				<li class="socials-nav-item"><a href="https://www.facebook.com/pillowswillow/"><span class="fa fa-facebook"></span></a></li>
+				<li class="socials-nav-item"><a href="https://www.instagram.com/pillowswillow/?hl=en"><span class="fa fa-instagram"></span></a></li>
+			</ul>
+			<div class="heading-block align-center subtract-height">
+				<div class="container">
+					<a href="#" class="btn btn-md" data-modal-link="get-it-now">Buy now!</a>
+					<a href="#" class="btn btn-outline btn-md" data-modal-link="details-sol">Trailer</a>
+				</div>
+			</div>
+
+			<div class="heading-block align-center pull-down-manual remove-padding">
+				<div class="container">
+					<div class="btns-container remove-padding">
+						<a href="https://www.oculus.com/experiences/gear-vr/1503070033096704/">
+							<img src="assets/img/gearvr-logo-white.png" class="hidden-xs hidden-sm" width="150" height="88" />
+						</a>
+
+						<a href="https://play.google.com/store/apps/details?id=pw.SparkOfLight.Daydream" class="hidden-xs hidden-sm">
+							<img src="assets/img/daydream-logo.png" class="hidden-xs hidden-sm" width="150" height="88" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--<section id="hero" class="hero-section ytp-player-background bg-cover window-height light-text" data-video="lZ4-8xMTeDE" data-property="{videoURL: 'https://www.youtube.com/watch?v=lZ4-8xMTeDE', containment: '#hero', autoPlay: true, realfullscreen: true, stopMovieOnBlur: false, addRaster: false, showControls: false, mute:true, startAt:0, opacity:1, gaTrack: false, mobileFallbackImage: 'assets/video/placeholders/book-placeholder.png'}">-->
+		<!--<section id="hero" class="hero-section bg1 window-height light-text">
+			<!--<div class="video-bg">
+				<video id="book-s" preload="metadata" loop class="book hidden-md hidden-lg" muted>
+					<source src="assets/video/book-s.mp4" type="video/mp4"/>
+				</video>
+				<video id="book-l" preload="metadata" loop class="book hidden-xs hidden-sm" muted>
+					<source src="assets/video/book-l.mp4" type="video/mp4"/>
+				</video>
+			</div>-->
+			<!--<div class="video-bg img-only"></div>
+			<ul class="socials-nav">
+				<li class="socials-nav-item"><a href="https://twitter.com/PillowsWillow"><span class="fa fa-twitter"></span></a></li>
+				<li class="socials-nav-item"><a href="https://www.facebook.com/pillowswillow/"><span class="fa fa-facebook"></span></a></li>
+				<li class="socials-nav-item"><a href="https://www.instagram.com/pillowswillow/?hl=en"><span class="fa fa-instagram"></span></a></li>
+			</ul>
+			<div class="heading-block align-center subtract-height">
+				<div class="container">
+					<a href="#" class="btn btn-md" data-modal-link="get-it-now">Buy now!</a>
+					<a href="#" class="btn btn-outline btn-md" data-modal-link="details-sol">Trailer</a>
+				</div>
+			</div>
+
+			<div class="heading-block align-center pull-down-manual remove-padding">
+				<div class="container">
+					<div class="btns-container remove-padding">
+						<a href="#">
+							<img src="assets/img/gearvr-logo-white.png" width="150" height="88" />
+						</a>
+
+						<a href="#">
+							<img src="assets/img/daydream-logo.png" width="150" height="88" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>-->
+
+		<header class="header header-black">
+			<div class="header-wrapper">
+				<div class="container">
+					<div class="col-sm-3 col-xs-12 navigation-header">
+						<a href="#" class="logo">
+							<img src="assets/img/logo-200x64.png" alt="Pillow's Willow VR Studio" width="200" height="64" class="retina-hide">
+							<img src="assets/img/logo-400x128.png" alt="Pillow's Willow VR Studio" width="200" height="64" class="retina-show">
+						</a>
+						<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-controls="navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-sm-9 col-xs-12 navigation-container">
+						<div id="navigation" class="navbar-collapse collapse">
+							<ul class="navigation-list pull-left light-text">
+								<li class="navigation-item"><a href="./index.html" class="navigation-link">Home</a></li>
+								<li class="navigation-item"><a href="./index.html#studio" class="navigation-link">Studio</a></li>
+								<li class="navigation-item"><a href="./index.html#games" class="navigation-link">Games</a></li>
+								<li class="navigation-item"><a href="#footer" class="navigation-link">Contact</a></li>
+								<li class="navigation-item hidden-sm hidden-md hidden-lg"><a href="./press.html" class="navigation-link">Press kit</a></li>
+							</ul>
+
+							<a href="./press.html" class="pull-right buy-btn">Press kit</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section id="about" class="section align-center remove-padding-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 testimonial-quote">
+						<a href="https://www.virtual-reality-shop.co.uk/spark-of-light-gear-vr/">
+							<h6>"Spark of Light is as good as VR games get."</h6>
+							<p>The VR Shop</p>
+						</a>	
+					</div>
+					<div class="col-xs-12 col-sm-6 testimonial-quote">
+						<a href="https://uploadvr.com/biggest-oculus-rift-gear-vr-releases-week/">
+							<h6>"Gear VR gamers should snap this up."</h6>
+							<p>UploadVR</p>
+						</a>	
+					</div>
+					
+				</div>
+
+				<div class="row">
+					<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
+						<img src="assets/img/games/meetnerow-300x300.png" alt="" class="img-responsive align-center" />
+					</div>
+					<div class="col-xs-12 col-sm-12">
+						<h3>Meet Nerow</h3>
+						<p class="text-alt"></p>
+						<br/>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-8 col-sm-push-2 align-left">
+						<h6>The unlikely hero in our story</h6>
+						<p>He’s hard to miss in his green dragon-outfit: a brave little boy called Nerow. He lives peacefully among his many friends the mothlings and the giant. All is well in the dreamscape, until…</p>
+						<br/>
+						<h6>Dark times arise</h6>
+						<p>A greedy mothking steals the sun, and it’s up to Nerow to get it back. As he sets out on his journey, however, one tiny obstacle comes to light: Nerow is afraid of the dark. Will you help him find the light and save the day?</p>
+						<a href="#" data-modal-link="get-it-now" class="btn" style="margin: 30px 0 0">Buy now</a>
+						<a href="#" data-modal-link="details-merch" class="btn btn-outline-clr align-right" style="margin: 30px 0 0">Merchandise</a>
+					</div>
+				</div>
+
+				<br/><br/><br/>
+
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="slidergallery">
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight01.jpg" alt="">
+						</div>
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight02.jpg" alt="">
+						</div>
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight03.jpg" alt="">
+						</div>
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight04.jpg" alt="">
+						</div>
+						<div class="col-xs-12">
+							<img data-lazy="assets/img/games/screenshots/sparkoflight05.jpg" alt="">
+						</div>
+					</div>
+				</div>	
+			</div>
+
+		</section>
+	</section>
+
+	<section id="studio" class="section overlay overlay-clr gradient-overlay bg-cover bg4 light-text align-center">
+		<div class="container" style="padding:100px 0;"><!-- Extra padding to show images -->
+			<h3>About us</h3>
+			<p>At Pillow's Willow we create highly interactive and immersive VR games and experiences that truly transport you to another world - called <b>The Virtual Dreamscape</b>.
+			</p>
+			<br/>
+			<a href="#" data-modal-link="details-studio" class="btn btn-lg btn-outline">Take a look</a>
+		</div>
+	</section>
+
+	<section id="games" class="section align-center">
+		<div class="container">
+			<h3>Our games</h3>
+			<br/>
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="#" data-modal-link="details-sol" class="game-column sol">
+						<h6>Spark of Light</h6>
+						<p>Released August 2017</p>
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="#" data-modal-link="details-pwdemo" class="game-column pwdemo">
+						<h6>Pillow's Willow</h6>
+						<p>Expected 2018</p>
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="#" data-modal-link="details-chainquest" class="game-column chainquest">
+						<h6>Reef Quest</h6>
+						<p>Expected early 2018</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer" id="footer">
+		<div class="container">
+			<h6>Contact</h6>
+
+			<ul class="list">
+				<li><i class="fa fa-map-marker"></i>Torenallee 20, 5617 BC Eindhoven</li>
+				<li><i class="fa fa-envelope"></i>info@pillowswillow.com</li>
+			</ul>
+		</div>
+
+		<div class="footer-base">
+			<div class="container">
+
+				<div class="col-md-6">
+					<ul class="footer-nav">
+						<li class="footer-nav-item"><a href="#footer">Contact</a></li>
+						<!--<li class="footer-nav-item"><a href="./privacy.html">Privacy policy</a></li>-->
+						<li class="footer-nav-item"><a href="assets/files/terms.pdf">Terms</a></li>
+						<li class="footer-nav-item"><a href="assets/files/Nederland%20ICT%20Voorwaarden%202014%20-%20NL.PDF">Partners</a></li>
+						<li class="footer-nav-item"><a href="./press.html">Press kit</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-6 align-right">
+					<ul class="socials-nav align-right">
+						<li class="socials-nav-item"><a href="https://twitter.com/PillowsWillow"><span class="fa fa-twitter"></span></a></li>
+						<li class="socials-nav-item"><a href="https://www.facebook.com/pillowswillow/"><span class="fa fa-facebook"></span></a></li>
+						<li class="socials-nav-item"><a href="https://www.instagram.com/pillowswillow/?hl=en"><span class="fa fa-instagram"></span></a></li>
+					</ul>
+
+					<p class="text-alt"><small>All Rights Reserved © 2017</small></p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<div class="modal-window" data-modal="get-it-now" style="background-color: rgba(2, 2, 2, 0.85);">
+		<div class="modal-box small animated" data-animation="fadeIn" data-duration="300">
+			<span class="close-btn icon icon-office-52"></span>
+			<h5 class="align-center">Choose your platform</h5>
+			<br/>
+			<div class="align-center">
+				<a href="https://www.oculus.com/experiences/gear-vr/1503070033096704/" class="underline-img">
+					<img src="assets/img/gearvr-logo.png" width="200" height="110" />
+				</a>
+
+				<a href="https://play.google.com/store/apps/details?id=pw.SparkOfLight.Daydream" class="underline-img">
+					<img src="assets/img/daydream-logo.png" width="200" height="110" />
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal-window" data-modal="details-sol" style="background-color: rgba(2, 2, 2, 0.85);">
+		<div class="modal-box iframe-box iframe-video">
+			<span class="close-btn icon icon-office-52"></span>
+
+			<iframe src="https://www.youtube.com/embed/yoVucmzfa_o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="modal-window" data-modal="details-merch" style="background-color: rgba(2, 2, 2, 0.85);">
+		<div class="modal-box small animated" data-animation="zoomIn" data-duration="700">
+			<span class="close-btn icon icon-office-52"></span>
+
+			<h5 class="align-center"><span class="highlight">Spark of Light merchandise</span></h5>
+			<br/>
+			<h7 class="align-center">Nerow's suit</h7>
+			<img class="img-responsive" src="assets/img/merch/nerow-suit01.jpg"/>
+
+			<p>Now you, too, can go on adventures dressed like a pro! Nerow's suit is available for &euro;120,- (ex. VAT).</p>
+			<p><a href="mailto:info@pillowswillow.com">Shoot us an email</a> if you're interested!</p>
+
+		</div>
+	</div>
+
+	<div class="modal-window" data-modal="details-chainquest" style="background-color: rgba(2, 2, 2, 0.85);">
+		<div class="modal-box medium animated" data-animation="zoomIn" data-duration="300">
+			<span class="close-btn icon icon-office-52"></span>
+
+			<div class="container">
+				<div class="row">
+					<br/>
+					<h3 class="align-center">Reef Quest</h3>
+				</div>
+				<div class="row">
+					<div class="iframe-box large">
+						<img src="assets/img/games/reefquest-page.jpg" alt="Reef Quest">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<p>In Reef Quest, a game for Samsung Gear VR and Google Daydream, players are tasked with cleaning up the ocean and saving the reefs in a playful way, thereby raising awareness for a global issue.</p>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="modal-window" data-modal="details-pwdemo" style="background-color: rgba(2, 2, 2, 0.85);">
+		<div class="modal-box medium animated" data-animation="zoomIn" data-duration="300">
+			<span class="close-btn icon icon-office-52"></span>
+
+			<div class="container">
+				<div class="row">
+					<br/>
+					<h3 class="align-center">Pillow's Willow</h3>
+				</div>
+				<div class="row">
+					<div class="iframe-box iframe-video large">
+						<iframe src="https://www.youtube.com/embed/glF3YzY1PiA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen class="trailer-box"></iframe>
+					</div>
+				</div>
+				<div class="row">
+					<p>The Pillows Willow game originally was created as a proof of concept for the HTC Vive, in conjunction with <a href="https://manus-vr.com/">Manus VR</a> to demonstrate the kind of gameplay made possible when using hand tracking and physical interactions. Based on the positive responses from HTC as well as Oculus and the majority of people who had the opportunity to try the demo the studio decided to develop a full featured game based on Pillow's Willow for HTC Vive and Oculus Rift. The game is expected to be released in 2018.</p>
+				</div>
+
+			</div>
+			
+
+		</div>
+	</div>
+
+	<div class="modal-window" data-modal="details-studio" style="background-color: rgba(2, 2, 2, 0.85);">
+		<div class="modal-box medium animated" data-animation="zoomIn" data-duration="300">
+			<span class="close-btn icon icon-office-52"></span>
+
+			<div class="container">
+				<div class="row">
+					<br/>
+					<h3 class="align-center">Pillow's Willow VR Studios</h3>
+				</div>
+				<br/>
+				<div class="row">
+					<h6>About the Studio</h6>
+					<p>Pillow’s Willow VR Studios was founded in 2016, and is located in Eindhoven, the Netherlands. The studio creates ‘Virtual Dreamscape’ games for both mobile and high-end VR HMDs. All games are developed in the so-called Pillow’s Universe, where each game title has its own recognisable identity.Having a shared universe allows the game title characters and certain game elements to enter other games seamlessly. This enables multiplayer options between games as well as different VR platforms.</p>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="iframe-box iframe-video large">
+						<iframe src="https://www.youtube.com/embed/VzhdbbZLvZI?rel=0&amp;showinfo=0&amp;cc_load_policy=1" frameborder="0" allowfullscreen class="trailer-box"></iframe>	
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<h6>Research and Development</h6>
+					<p>Besides producing our own games, we also cooperate with organizations such as <a href="https://manus-vr.com/">ManusVR</a> and <a href="http://www.vree.world/">VRee</a> to find new innovations and applications within the VR industry. Among others, this has led to the Pillow's Willow Demo for Oculus Rift and HTC Vive and played with Manus gloves, as well as VRisb - a full body experience.</p>
+				</div>
+				<div class="row">
+					<div class="iframe-box iframe-video large">
+						<iframe width="854" height="480" src="https://www.youtube.com/embed/l9CCR3JlfEI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen class="trailer-box"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+	</div>
+</div>
+</div>
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js?ver=1"></script>
+		<![endif]-->
+		<!--[if (gte IE 9) | (!IE)]><!-->
+		<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js?ver=1"></script>
+		<!--<![endif]-->
+
+		<!--<script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script> DISABLED BECAUSE NO MAPS-->
+		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="assets/js/toastr.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.appear.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.plugin.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
+		<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+		<script type="text/javascript" src="assets/js/modal-box.js"></script>
+		<script type="text/javascript" src="assets/js/ventcamp.js"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+	</body>
+	</html>

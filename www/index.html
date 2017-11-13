@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-
+	<!-- SOME HUGE COMMENT -->
 	<meta charset="utf-8">
 	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -20,8 +20,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style-pw.css" />
 
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-	
-	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> DISABLED BECAUSE NO MAP -->
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/userinfo/1.1.0/userinfo.min.js"></script>
+
 	<script>
 		/*	OLD SCRIPT TO SWAP VIDEOS DEPENDING ON SCREEN SIZE
 		window.pw = {};
@@ -51,6 +51,7 @@
 
 		window.onload = InitVideos;
 		window.onresize = OnResize;*/
+		
 	</script>
 
 	<!--[if lt IE 9]>
@@ -73,7 +74,7 @@
 
 	</head>
 
-	<body>
+	<body data-usesliders="true" data-usetrailers="true">
 		<div class="preloader-mask">
 			<div class="preloader"></div>
 		</div>
@@ -337,11 +338,10 @@
 		</div>
 	</div>
 
-	<div class="modal-window" data-modal="details-sol" style="background-color: rgba(2, 2, 2, 0.85);">
+	<div id="details-sol" class="modal-window" data-modal="details-sol" style="background-color: rgba(2, 2, 2, 0.85);">
 		<div class="modal-box iframe-box iframe-video">
 			<span class="close-btn icon icon-office-52"></span>
-
-			<iframe src="https://www.youtube.com/embed/yoVucmzfa_o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			<span id="sol_trailer_anchor"></span><!--Used to create trailer element at this location! -->
 		</div>
 	</div>
 
@@ -454,7 +454,7 @@
 		<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js?ver=1"></script>
 		<!--<![endif]-->
 
-		<!--<script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script> DISABLED BECAUSE NO MAPS-->
+		<script type="text/javascript" src="assets/js/loadcorrectvideos.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="assets/js/toastr.min.js"></script>
@@ -464,8 +464,12 @@
 		<script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
 		<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
 		<script type="text/javascript" src="assets/js/modal-box.js"></script>
-		<script type="text/javascript" src="assets/js/ventcamp.js"></script>
+		
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+		<script type="text/javascript" src="assets/js/ventcamp.js"></script>
+		
+
+		
 
 	</body>
 	</html>

@@ -29,6 +29,7 @@
             animation = $el.find('.modal-box').data('animation'),
             $iframe = $el.find('iframe');
 
+        // Hide currently open modal boxes
         if ( $('[data-modal].open').length ) $('[data-modal].open').modalBox('hide');
 
         /*// THIJS: Here the src for the iframes is swapped back in. Needs to be stored in array for this to work!
@@ -154,7 +155,6 @@
                 var $this = $(this);
                 var src = $this.attr('src');
                 $this.attr('src', '');
-                var dataArray
                 $this.data('iframeSrc', src);
             });
 
